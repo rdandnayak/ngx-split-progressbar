@@ -29,4 +29,4 @@ jobs:
       - name: Run a multi-line script
         run: |
           npm ci
-          ng build ngx-split-progressbar
+          npm run build
