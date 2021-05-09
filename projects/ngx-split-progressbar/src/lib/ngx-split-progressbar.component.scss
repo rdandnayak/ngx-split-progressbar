@@ -1,0 +1,35 @@
+.progress-bar-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.progress-bar {
+  margin-bottom: 16px;
+  width: 100%;
+  overflow: hidden;
+  height: 32px;
+  border-radius: 4px;
+}
+
+.progress-slot {
+  height: 100%;
+  float: left;
+}
+
+.legends-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.legend {
+  display: flex;
+  flex: 1 1 20%;
+  align-items: center;
+}
+
+.box-indicator {
+  width: 13px;
+  height: 13px;
+  margin-right: 6px;
+}

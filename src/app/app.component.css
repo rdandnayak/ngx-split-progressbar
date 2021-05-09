@@ -1,0 +1,11 @@
+.progress-bar-container {
+  width: 50%;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+}
+.progress-bar {
+  min-width: 500px;
+}
