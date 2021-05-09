@@ -1,4 +1,5 @@
-![example workflow](https://github.com/github/docs/actions/workflows/main.yml/badge.svg)
+[![CI](https://github.com/rdandnayak/ngx-split-progressbar/actions/workflows/main.yml/badge.svg)](https://github.com/rdandnayak/ngx-split-progressbar/actions/workflows/main.yml)
+
 # Split Progressbar App
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.12.
