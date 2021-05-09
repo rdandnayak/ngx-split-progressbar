@@ -118,6 +118,46 @@
           }
         }
       }
+    },
+    "ngx-split-progressbar": {
+      "projectType": "library",
+      "root": "projects/ngx-split-progressbar",
+      "sourceRoot": "projects/ngx-split-progressbar/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "projects/ngx-split-progressbar/tsconfig.lib.json",
+            "project": "projects/ngx-split-progressbar/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ngx-split-progressbar/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ngx-split-progressbar/src/test.ts",
+            "tsConfig": "projects/ngx-split-progressbar/tsconfig.spec.json",
+            "karmaConfig": "projects/ngx-split-progressbar/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ngx-split-progressbar/tsconfig.lib.json",
+              "projects/ngx-split-progressbar/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "split-progressbar-app"

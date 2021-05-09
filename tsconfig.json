@@ -10,6 +10,12 @@
     "experimentalDecorators": true,
     "moduleResolution": "node",
     "importHelpers": true,
+    "paths": {
+      "ngx-split-progressbar": [
+        "dist/ngx-split-progressbar/ngx-split-progressbar",
+        "dist/ngx-split-progressbar"
+      ]
+    },
     "target": "es2015",
     "module": "es2020",
     "lib": [

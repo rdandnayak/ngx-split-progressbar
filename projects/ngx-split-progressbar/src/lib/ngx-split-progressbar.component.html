@@ -1,0 +1,15 @@
+<section class="progress-bar-container">
+  <div class="progress-bar">
+    <div
+      *ngFor="let slot of data"
+      class="progress-slot"
+      [ngStyle]="{ width: slot.weightage + '%', background: slot.color }"
+    ></div>
+  </div>
+  <div class="legends-container">
+    <div *ngFor="let legend of data" class="legend">
+      <div class="box-indicator" [ngStyle]="{ background: legend.color }"></div>
+      {{ legend.name }}
+    </div>
+  </div>
+</section>
