@@ -1,5 +1,12 @@
 <div class="progress-bar-container">
   <section class="progress-bar">
-    <lib-ngx-split-progressbar></lib-ngx-split-progressbar>
+    <lib-ngx-split-progressbar
+      [data]="[
+    { name: 'Slot one', color: '#AEC6F4', weightage: 20 },
+    { name: 'Slot two', color: '#C5C9E5', weightage: 20 },
+    { name: 'Slot three', color: '#BBDBCE', weightage: 20 },
+    { name: 'Slot four', color: '#F8E6A6', weightage: 40 },
+  ]"
+    ></lib-ngx-split-progressbar>
   </section>
 </div>
