@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { ProgressBarSlot } from './model';
 
 @Component({
   selector: 'lib-ngx-split-progressbar',
@@ -6,7 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['ngx-split-progressbar.component.scss'],
 })
 export class NgxSplitProgressbarComponent implements OnInit {
-  @Input() data: any = [
+  @Input() data: ProgressBarSlot[] = [
     { name: 'Slot one', color: '#AEC6F4', weightage: 20 },
     { name: 'Slot two', color: '#C5C9E5', weightage: 20 },
     { name: 'Slot three', color: '#BBDBCE', weightage: 20 },
