@@ -44,5 +44,3 @@ Include the component in below format
   ]">
 </lib-ngx-split-progressbar>
 ```
-
-da
