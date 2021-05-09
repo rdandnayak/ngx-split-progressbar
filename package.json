@@ -5,7 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "npm run build:lib && ng build split-progressbar-app",
-    "build:lib": "ng build ngx-split-progressbar",
+    "build:lib": "ng build ngx-split-progressbar --prod",
     "test": "ng test --browsers=ChromeHeadless --watch=false --code-coverage",
     "lint": "ng lint",
     "e2e": "ng e2e"

@@ -1,24 +1,40 @@
-# NgxSplitProgressbar
+[![CI](https://github.com/rdandnayak/ngx-split-progressbar/actions/workflows/main.yml/badge.svg)](https://github.com/rdandnayak/ngx-split-progressbar/actions/workflows/main.yml)
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.13.
+# Introduction
 
-## Code scaffolding
+This component allow you to manage a progress visually with split slots like
+shown in below image
 
-Run `ng generate component component-name --project ngx-split-progressbar` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project ngx-split-progressbar`.
-> Note: Don't forget to add `--project ngx-split-progressbar` or else it will be added to the default project in your `angular.json` file. 
+![image](https://user-images.githubusercontent.com/816239/117569993-f509ed80-b0e5-11eb-91d5-99dc5c92fe0a.png)
 
-## Build
 
-Run `ng build ngx-split-progressbar` to build the project. The build artifacts will be stored in the `dist/` directory.
+## installation
 
-## Publishing
+Type the following command to install the package:
+```angular2html
+npm install ngx-split-progressbar@latest
+```
 
-After building your library with `ng build ngx-split-progressbar`, go to the dist folder `cd dist/ngx-split-progressbar` and run `npm publish`.
+Then you need to import it into your app modules
+```angular2html
+import { NgxSplitProgressbarModule } from "ngx-split-progrssbar"
 
-## Running unit tests
+@NgModule({
+  imports: [
+    NgxSplitProgressbarModule
+  ]
+})
+```
 
-Run `ng test ngx-split-progressbar` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## How to use
+Include the component in below format
+```angular2html
+<lib-ngx-split-progressbar 
+  [data]="[
+    { name: 'Slot one', color: '#AEC6F4', weightage: 20 },
+    { name: 'Slot two', color: '#C5C9E5', weightage: 20 },
+    { name: 'Slot three', color: '#BBDBCE', weightage: 20 },
+    { name: 'Slot four', color: '#F8E6A6', weightage: 40 },
+  ]">
+</lib-ngx-split-progressbar>
+```
