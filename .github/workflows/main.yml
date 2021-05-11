@@ -36,9 +36,9 @@ jobs:
       - name: Run a multi-line script
         run: |
           npm ci
-          npm run build
           npm run test
           npm run lint
+          npm run build:lib
           npm publish dist/ngx-split-progressbar
         env: 
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
