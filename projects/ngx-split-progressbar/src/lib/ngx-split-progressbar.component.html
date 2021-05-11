@@ -9,7 +9,7 @@
   <div class="legends-container">
     <div *ngFor="let legend of data" class="legend">
       <div class="box-indicator" [ngStyle]="{ background: legend.color }"></div>
-      {{ legend.name }}
+      {{ legend.name }} - {{legend.weightage}}%
     </div>
   </div>
 </section>
