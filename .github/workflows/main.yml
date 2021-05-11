@@ -34,16 +34,13 @@ jobs:
           npm ci
           npm run test ngx-split-progressbar
           npm run lint ngx-split-progressbar
-      - name: publish
-        run: |
-          cd projects/ngx-split-progressbar
-          npm version patch
-          cd ../..
-          git remote set-url --push origin https://rdandnayak:$GITHUB_TOKEN@github.com/rdandnayak/ngx-split-progressbar.git
           npm run build:lib
-          npm publish dist/ngx-split-progressbar --access public
+      - uses: mikeal/merge-release@master
+      - name: publish
         env: 
           NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          DEPLOY_DIR: dist/ngx-split-progressbar
+          SRC_PACKAGE_DIR: projects/ngx-split-progressbar
 
