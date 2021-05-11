@@ -24,12 +24,8 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
-      - name: Code Coverage Report
-        uses: romeovs/lcov-reporter-action@v0.2.11
+      - uses: actions/setup-node@v1
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          lcov-file: ./coverage/lcov.info
           registry-url: 'https://registry.npmjs.org'
 
       # Runs a set of commands using the runners shell
