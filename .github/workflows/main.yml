@@ -32,11 +32,12 @@ jobs:
       - name: Run a multi-line script
         run: |
           npm ci
-          npm run test ngx-split-progressbar
-          npm run lint ngx-split-progressbar
-          npm run build:lib
+          #npm run test ngx-split-progressbar
+          #npm run lint ngx-split-progressbar
+          
       - uses: mikeal/merge-release@master
       - name: publish
+        run: npm run build:lib
         env: 
           NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
