@@ -32,8 +32,8 @@ jobs:
       - name: Run a multi-line script
         run: |
           npm ci
-          #npm run test ngx-split-progressbar
-          #npm run lint ngx-split-progressbar
+          npm run test ngx-split-progressbar
+          npm run lint ngx-split-progressbar
       - name: publish
         run: |
           cd projects/ngx-split-progressbar
