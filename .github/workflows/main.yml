@@ -36,10 +36,15 @@ jobs:
           #npm run lint ngx-split-progressbar
       - name: publish
         run: |
+          cd projects/ngx-split-progressbar
+          npm version patch
+          cd ../..
+          git remote set-url --push origin https://rdandnayak:$GITHUB_TOKEN@github.com/rdandnayak/ngx-split-progressbar.git
           npm run build:lib
           npm publish dist/ngx-split-progressbar --access public
         env: 
           NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           token: ${{ secrets.NPM_AUTH_TOKEN }}
 
