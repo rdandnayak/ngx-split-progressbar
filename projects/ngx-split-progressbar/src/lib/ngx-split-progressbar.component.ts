@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { ProgressBarSlot } from './model';
+import { ProgressBarSlot } from './ngx-split-progressbar.model';
 
 @Component({
   selector: 'lib-ngx-split-progressbar',
