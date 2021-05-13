@@ -5,4 +5,4 @@
 export * from './lib/ngx-split-progressbar.service';
 export * from './lib/ngx-split-progressbar.component';
 export * from './lib/ngx-split-progressbar.module';
-export {ProgressBarSlot} from './lib/ngx-split-progressbar.model';
+export * from './lib/ngx-split-progressbar.model';
