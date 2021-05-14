@@ -6,9 +6,9 @@ name: CI
 on:
   # Triggers the workflow on push or pull request events but only for the main branch
   push:
-    branches: [ main ]
+    branches: [main]
   pull_request:
-    branches: [ main ]
+    branches: [main]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -27,8 +27,8 @@ jobs:
       # Setup .npmrc file to publish to npm
       - uses: actions/setup-node@v2
         with:
-          node-version: '14.17.0'
-          registry-url: 'https://registry.npmjs.org'
+          node-version: "14.17.0"
+          registry-url: "https://registry.npmjs.org"
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
         run: |
@@ -39,5 +39,9 @@ jobs:
           npm publish dist/ngx-split-progressbar
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
-
-
+      - uses: actions/setup-node@v2
+        with:
+          registry-url: "https://npm.pkg.github.com"
+      - run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
