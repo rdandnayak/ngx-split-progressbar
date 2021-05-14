@@ -24,12 +24,20 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-
+      # Setup .npmrc file to publish to npm
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '14.17.0'
+          registry-url: 'https://registry.npmjs.org'
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
         run: |
           npm ci
           #npm run test ngx-split-progressbar
           #npm run lint ngx-split-progressbar
-          #npm run build:lib
+          npm run build:lib
+          npm publish dist/ngx-split-progressbar
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
+
 
