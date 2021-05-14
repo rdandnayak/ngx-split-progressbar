@@ -44,6 +44,6 @@ jobs:
           registry-url: "https://npm.pkg.github.com"
           scope: "@rdandnayak"
       - name: Publish to GitHub
-      - run: npm publish dist/ngx-split-progressbar
+        run: npm publish dist/ngx-split-progressbar
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
